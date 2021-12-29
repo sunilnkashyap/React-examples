@@ -1,14 +1,15 @@
 import logo from './logo.svg';
-import './App.css';
+import styles from './app.scss';
 import { TestComponent } from './components/TestComponent'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <TestComponent label="from App component" />
-      </header>
+      <h1 className={styles.AppLink}>Header</h1>
+
+      <h1>Content</h1>
+
+      <h1>footer</h1>
     </div>
   );
 }
