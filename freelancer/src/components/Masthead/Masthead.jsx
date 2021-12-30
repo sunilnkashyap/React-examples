@@ -4,10 +4,6 @@ import AvatarSVG from '../../assets/img/avataaars.svg';
 
 
 export function Masthead(props) {
-    console.log(props);
-
-    const [count, setCount] = useState(0);
-
 
     const { title, subTitle } = props;
 
@@ -22,12 +18,6 @@ export function Masthead(props) {
                 <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
                 <div className="divider-custom-line"></div>
             </div>
-            <p className="masthead-subheading font-weight-light mb-0">{subTitle}</p>
-            <p className="masthead-subheading font-weight-light mb-0"> {count} </p>
-
-            <button onClick={() => setCount(count + 1)}>
-                Click me
-            </button>
         </div>
     </header>
   );
