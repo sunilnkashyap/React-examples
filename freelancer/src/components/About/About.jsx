@@ -20,7 +20,7 @@ export function About(props) {
                 {
                   shrotDescriptions.map((singleDescription) => {
                     return (
-                      <div className="col-lg-4 ms-auto"><p className="lead">{singleDescription}</p></div>
+                      <div className="col-lg-4 ms-auto me-auto"><p className="lead">{singleDescription}</p></div>
                     )
                   })
                 }
