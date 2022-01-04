@@ -23,7 +23,7 @@ function App() {
         <SectionContainer title="Portfolio">
           {
             portfolioData.map((singlePortfolio, index) => {
-              return <PortfolioCard key={`portfoliocard_${index}`} imgSrc={singlePortfolio.imgSrc} imgAlt={singlePortfolio.imgAlt} />
+              return <PortfolioCard key={`portfoliocard_${index}`} imgSrc={singlePortfolio.imgSrc} imgAlt={singlePortfolio.imgAlt} slug={singlePortfolio.slug} />
             })
           }
         </SectionContainer>

@@ -1,17 +1,15 @@
 import * as React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import Application from '../containers/App/App';
+import App from '../containers/App/App';
 import PortfolioContainer from '../containers/PorfolioContainer/PortfolioContainer';
 
 
 export function AppRoutes() {
   return (
-    <div>
-      <h1>Welcome to React Router!</h1>
-      <Routes>
-        <Route path="/" element={<Application />} />
-        <Route path="/portfolio" element={<PortfolioContainer />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/portfolio/:slug" element={<PortfolioContainer />} />
+      <Route path="*" element={<h1>404 not found</h1>} />
+    </Routes>
   );
 }
