@@ -17,9 +17,6 @@ function App() {
         <Header  title={basicData.title} />
         <Masthead title={basicData.title} subTitle={basicData.subTitle} />
 
-
-
-
         <SectionContainer title="Portfolio">
           {
             portfolioData.map((singlePortfolio, index) => {

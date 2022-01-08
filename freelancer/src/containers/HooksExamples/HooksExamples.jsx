@@ -3,6 +3,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { Header, Footer } from '../../components';
 import { basicData } from '../../assets/data/data';
 import { useCallback } from 'react/cjs/react.development';
+import { Link } from 'react-router-dom';
 
 function HooksExamples() {
  
@@ -13,12 +14,12 @@ function HooksExamples() {
 
     const inputEl = useRef(null);
 
-    const incrementHandler = useMemo(() => {
+    const incrementHandler = () => {
         // count increment 
         setCount(count + 1); // 1
 
 
-    }, [testState]);
+    };
 
 
 
@@ -37,14 +38,15 @@ function HooksExamples() {
 
     useEffect(() => {
 
+        console.log('useEffect without depedencies');
 
-
-        console.log(inputEl);
-
-        inputEl.current.value = 'Sunil';
+        return () => {
+            console.log('clean up code');
+        }
 
     }, [])
 
+    console.log(' component rerender');
 
   return (
     <div className="App">
@@ -54,6 +56,7 @@ function HooksExamples() {
             <p className='pt-5 mt-5'></p>
             <h1>Hooks Examples</h1>
 
+            <Link to="/">Test</Link>
             <h2>Count :: {count}</h2>
 
 

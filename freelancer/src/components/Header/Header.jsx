@@ -1,7 +1,7 @@
 import './Header.css';
 
 export function Header({ title }) {
-    console.log('Header');
+    // console.log('Header');
   return (
     <div className="App">
         <nav className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
